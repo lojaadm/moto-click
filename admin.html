@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#03070d"><title>Moto Click | Painel ADM</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+:root{--bg:#03070d;--panel:#08111c;--panel2:#0d1825;--line:#1a2c42;--txt:#f7f9fc;--mut:#9db0c5;--blue:#087dff;--red:#ef4444;--green:#20c86a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0,#082244 0,transparent 28%),var(--bg);color:var(--txt);font-family:Inter,Segoe UI,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,calc(100% - 28px));margin:auto}.top{border-bottom:1px solid var(--line);background:rgba(3,7,13,.94);backdrop-filter:blur(14px);position:sticky;top:0;z-index:20}.head{height:82px;display:flex;align-items:center;gap:18px}.logo{width:155px;height:62px;object-fit:contain}.head h1{font-size:20px;margin:0}.head .sp{flex:1}.topbtn{border:1px solid #245181;background:#0b1623;color:white;border-radius:9px;padding:10px 14px}
+.card{background:linear-gradient(180deg,#0b1724,#07111c);border:1px solid var(--line);border-radius:16px;box-shadow:0 18px 60px rgba(0,0,0,.3)}.login{width:min(460px,calc(100% - 28px));margin:70px auto;padding:28px}.login h2{margin:0 0 7px;font-size:30px}.mut{color:var(--mut)}.field{display:grid;gap:7px;margin:15px 0}label{font-size:13px;color:#c9d6e4;font-weight:700}input,select,textarea{width:100%;border:1px solid #253a52;background:#07101a;color:white;border-radius:9px;padding:11px 12px;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--blue)}textarea{min-height:95px;resize:vertical}.btn{border:0;border-radius:9px;padding:12px 15px;font-weight:800}.primary{background:linear-gradient(90deg,#0872ee,#078cff);color:white}.ghost{background:#0c1a29;color:white;border:1px solid #26425f}.danger{background:#3a1015;color:#ff9a9a;border:1px solid #6d1e27}.green{background:#113f2b;color:#78f2af;border:1px solid #1f7a4c}.login-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.msg{margin-top:14px;padding:10px 12px;background:#0c1a2a;border:1px solid #1c3e65;border-radius:9px;color:#bcdcff;display:none}
+.app{display:none;padding:28px 0 50px}.toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:18px}.toolbar h2{margin:0 12px 0 0;font-size:28px}.toolbar .sp{flex:1}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px}.stat{padding:18px}.stat b{font-size:30px;display:block;color:#7ec6ff}.stat span{color:var(--mut);font-size:13px}
+.products{overflow:hidden}.prow{display:grid;grid-template-columns:72px 1.5fr .8fr .55fr .65fr auto;gap:14px;align-items:center;padding:14px 16px;border-bottom:1px solid #14263a}.prow:last-child{border-bottom:0}.photo{width:64px;height:64px;border-radius:10px;background:#11243a;overflow:hidden;display:grid;place-items:center;font-size:28px}.photo img{width:100%;height:100%;object-fit:cover}.pname b{display:block}.pname small{color:var(--mut)}.status{font-size:12px;padding:5px 9px;border-radius:999px;display:inline-block;background:#153b2a;color:#7bf0ac}.status.off{background:#402026;color:#ff9ba5}.actions{display:flex;gap:7px}.mini{border:1px solid #26415f;background:#0c1a29;color:white;border-radius:8px;padding:8px 10px}.mini.red{border-color:#6c2630;color:#ff9ba5}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.72);display:none;place-items:center;padding:18px;z-index:50}.modal.open{display:grid}.modal-card{width:min(820px,100%);max-height:92vh;overflow:auto;padding:22px}.modal-head{display:flex;align-items:center;margin-bottom:12px}.modal-head h3{margin:0;font-size:24px}.modal-head button{margin-left:auto}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.full{grid-column:1/-1}.checks{display:flex;gap:20px;align-items:center;flex-wrap:wrap}.checks label{display:flex;gap:8px;align-items:center}.checks input{width:auto}.images{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}.iprev{width:100px;height:85px;border-radius:9px;overflow:hidden;position:relative;border:1px solid #263b55}.iprev img{width:100%;height:100%;object-fit:cover}.iprev button{position:absolute;right:4px;top:4px;border:0;border-radius:50%;width:25px;height:25px;background:#a91423;color:white}.form-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:20px}.empty{padding:36px;text-align:center;color:var(--mut)}.loading{opacity:.65;pointer-events:none}
+@media(max-width:800px){.stats{grid-template-columns:1fr}.prow{grid-template-columns:58px 1fr auto}.prow>.hide-mobile{display:none}.actions{grid-column:2/4}.formgrid{grid-template-columns:1fr}.full{grid-column:auto}}
+</style>
+</head><body>
+<header class="top"><div class="wrap head"><img src="assets/logo.svg" class="logo" alt="Moto Click"><h1>Painel Administrativo</h1><span class="sp"></span><a class="topbtn" href="index.html">← Ver loja</a><button id="logoutTop" class="topbtn" style="display:none">Sair</button></div></header>
+<section id="loginBox" class="card login">
+  <h2>Acesso ADM</h2><p class="mut">Entre com o e-mail autorizado para administrar a Moto Click.</p>
+  <div class="field"><label>E-mail</label><input id="email" type="email" autocomplete="username" placeholder="seuemail@empresa.com"></div>
+  <div class="field"><label>Senha</label><input id="password" type="password" autocomplete="current-password" placeholder="Sua senha"></div>
+  <div class="login-actions"><button id="loginBtn" class="btn primary">Entrar</button><button id="signupBtn" class="btn ghost">Criar primeiro acesso</button></div>
+  <div id="loginMsg" class="msg"></div>
+</section>
+<main id="app" class="app"><div class="wrap">
+  <div class="toolbar"><h2>Produtos</h2><button id="newBtn" class="btn primary">＋ Novo produto</button><span class="sp"></span><input id="adminSearch" style="width:min(300px,100%)" placeholder="Buscar produto..."></div>
+  <div class="stats"><div class="card stat"><b id="stTotal">0</b><span>Produtos cadastrados</span></div><div class="card stat"><b id="stActive">0</b><span>Produtos ativos</span></div><div class="card stat"><b id="stLow">0</b><span>Com estoque baixo (≤ 5)</span></div></div>
+  <section class="card products" id="productList"></section>
+</div></main>
+<div id="modal" class="modal"><section class="card modal-card">
+  <div class="modal-head"><h3 id="formTitle">Novo produto</h3><button id="closeModal" class="mini">✕</button></div>
+  <form id="productForm">
+    <div class="formgrid">
+      <div class="field"><label>Nome do produto *</label><input id="fName" required></div>
+      <div class="field"><label>Código / SKU</label><input id="fSku"></div>
+      <div class="field"><label>Modelo / aplicação</label><input id="fModel" placeholder="Ex.: CG 160 / Titan 150"></div>
+      <div class="field"><label>Categoria</label><select id="fCategory"><option>Motor</option><option>Elétrica</option><option>Freios</option><option>Suspensão</option><option>Transmissão</option><option>Carenagem</option><option>Acessórios</option><option>Diversos</option></select></div>
+      <div class="field"><label>Preço (R$) *</label><input id="fPrice" type="number" min="0" step="0.01" required></div>
+      <div class="field"><label>Estoque</label><input id="fStock" type="number" min="0" step="1" value="0"></div>
+      <div class="field full"><label>Descrição</label><textarea id="fDescription"></textarea></div>
+      <div class="field full"><label>Fotos do produto (JPG, PNG ou WebP; até 5 MB por foto)</label><input id="fImages" type="file" accept="image/jpeg,image/png,image/webp,image/gif" multiple><div id="existingImages" class="images"></div></div>
+      <div class="field full checks"><label><input id="fFeatured" type="checkbox"> Produto em destaque</label><label><input id="fActive" type="checkbox" checked> Produto ativo na loja</label></div>
+    </div>
+    <div class="form-actions"><button type="button" id="cancelBtn" class="btn ghost">Cancelar</button><button type="submit" id="saveBtn" class="btn primary">Salvar produto</button></div>
+  </form>
+</section></div>
+<script>
+const SB_URL="https://lvoizfpdpvcqqhsrmflu.supabase.co", SB_KEY="sb_publishable_EjEA70CvIvAiU_v20wrL1A_F1jxNQmX", BUCKET='moto-click-products';
+const sb=window.supabase.createClient(SB_URL,SB_KEY);
+let products=[], editing=null, currentImages=[];
+const el=id=>document.getElementById(id);
+const money=v=>Number(v||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+const icons={'Motor':'⚙','Elétrica':'ϟ','Freios':'◉','Suspensão':'⌁','Transmissão':'⛓','Carenagem':'➤','Acessórios':'⌘','Diversos':'✺'};
+function showMsg(msg){el('loginMsg').textContent=msg;el('loginMsg').style.display='block'}
+async function checkAdmin(){
+  const {data:{session}}=await sb.auth.getSession();
+  if(!session)return false;
+  const {data,error}=await sb.rpc('is_moto_click_admin');
+  if(error||data!==true){await sb.auth.signOut();showMsg('Este e-mail não está autorizado como ADM.');return false}
+  return true;
+}
+async function boot(){if(await checkAdmin())showApp(); else {el('loginBox').style.display='block';el('app').style.display='none'}}
+async function showApp(){el('loginBox').style.display='none';el('app').style.display='block';el('logoutTop').style.display='inline-block';await loadProducts()}
+el('loginBtn').onclick=async()=>{
+  const email=el('email').value.trim(),password=el('password').value;
+  if(!email||!password)return showMsg('Informe e-mail e senha.');
+  el('loginBtn').disabled=true;
+  const {error}=await sb.auth.signInWithPassword({email,password});
+  el('loginBtn').disabled=false;
+  if(error)return showMsg('Não foi possível entrar: '+error.message);
+  if(await checkAdmin())showApp();
+};
+el('signupBtn').onclick=async()=>{
+  const email=el('email').value.trim(),password=el('password').value;
+  if(!email||password.length<6)return showMsg('Informe seu e-mail e uma senha com pelo menos 6 caracteres.');
+  el('signupBtn').disabled=true;
+  const {data,error}=await sb.auth.signUp({email,password,options:{emailRedirectTo:location.origin+location.pathname}});
+  el('signupBtn').disabled=false;
+  if(error)return showMsg('Não foi possível criar o acesso: '+error.message);
+  if(data.session){ if(await checkAdmin())showApp(); }
+  else showMsg('Acesso criado. Verifique seu e-mail para confirmar a conta e depois entre novamente.');
+};
+async function logout(){await sb.auth.signOut();location.reload()} el('logoutTop').onclick=logout;
+async function loadProducts(){
+  el('productList').innerHTML='<div class="empty">Carregando...</div>';
+  const {data,error}=await sb.from('moto_click_products').select('*').order('created_at',{ascending:false});
+  if(error){el('productList').innerHTML='<div class="empty">Erro ao carregar: '+esc(error.message)+'</div>';return}
+  products=data||[];renderProducts();
+}
+function renderProducts(){
+  const q=el('adminSearch').value.toLowerCase();
+  const list=products.filter(p=>(p.name+' '+p.model+' '+p.sku+' '+p.category).toLowerCase().includes(q));
+  el('stTotal').textContent=products.length;el('stActive').textContent=products.filter(p=>p.active).length;el('stLow').textContent=products.filter(p=>Number(p.stock)<=5).length;
+  el('productList').innerHTML=list.length?list.map(p=>`<div class="prow"><div class="photo">${p.image_urls?.[0]?`<img src="${p.image_urls[0]}" alt="">`:(icons[p.category]||'⚙')}</div><div class="pname"><b>${esc(p.name)}</b><small>${esc(p.model||p.sku||p.category)}</small></div><div class="hide-mobile"><b>${money(p.price)}</b></div><div class="hide-mobile">Estoque: <b>${p.stock}</b></div><div class="hide-mobile"><span class="status ${p.active?'':'off'}">${p.active?'Ativo':'Oculto'}</span></div><div class="actions"><button class="mini" onclick="editProduct('${p.id}')">Editar</button><button class="mini red" onclick="removeProduct('${p.id}')">Excluir</button></div></div>`).join(''):'<div class="empty">Nenhum produto encontrado.</div>';
+}
+el('adminSearch').oninput=renderProducts;
+function openModal(p=null){
+  editing=p;currentImages=[...(p?.image_urls||[])];el('formTitle').textContent=p?'Editar produto':'Novo produto';
+  el('fName').value=p?.name||'';el('fSku').value=p?.sku||'';el('fModel').value=p?.model||'';el('fCategory').value=p?.category||'Motor';el('fPrice').value=p?.price??'';el('fStock').value=p?.stock??0;el('fDescription').value=p?.description||'';el('fFeatured').checked=!!p?.featured;el('fActive').checked=p?!!p.active:true;el('fImages').value='';renderImages();el('modal').classList.add('open')
+}
+function closeModal(){el('modal').classList.remove('open')} el('newBtn').onclick=()=>openModal();el('closeModal').onclick=closeModal;el('cancelBtn').onclick=closeModal;
+window.editProduct=id=>openModal(products.find(p=>p.id===id));
+function renderImages(){el('existingImages').innerHTML=currentImages.map((u,i)=>`<div class="iprev"><img src="${u}" alt=""><button type="button" onclick="removeImage(${i})">×</button></div>`).join('')}
+window.removeImage=i=>{currentImages.splice(i,1);renderImages()};
+async function uploadFiles(productId){
+  const files=[...el('fImages').files];const urls=[];
+  for(const file of files){
+    if(file.size>5*1024*1024)throw new Error(file.name+' excede 5 MB.');
+    const ext=(file.name.split('.').pop()||'jpg').toLowerCase().replace(/[^a-z0-9]/g,'');
+    const path=`${productId}/${Date.now()}-${crypto.randomUUID()}.${ext}`;
+    const {error}=await sb.storage.from(BUCKET).upload(path,file,{cacheControl:'3600',upsert:false});
+    if(error)throw error;
+    const {data}=sb.storage.from(BUCKET).getPublicUrl(path);urls.push(data.publicUrl);
+  }
+  return urls;
+}
+el('productForm').onsubmit=async e=>{
+  e.preventDefault();const btn=el('saveBtn');btn.disabled=true;btn.textContent='Salvando...';
+  try{
+    const id=editing?.id||crypto.randomUUID();const uploaded=await uploadFiles(id);const payload={id,name:el('fName').value.trim(),sku:el('fSku').value.trim(),model:el('fModel').value.trim(),category:el('fCategory').value,price:Number(el('fPrice').value||0),stock:Number(el('fStock').value||0),description:el('fDescription').value.trim(),featured:el('fFeatured').checked,active:el('fActive').checked,image_urls:[...currentImages,...uploaded]};
+    if(editing){const {error}=await sb.from('moto_click_products').update(payload).eq('id',id);if(error)throw error}
+    else {const {error}=await sb.from('moto_click_products').insert(payload);if(error)throw error}
+    closeModal();await loadProducts();
+  }catch(err){alert('Erro ao salvar: '+(err.message||err))}finally{btn.disabled=false;btn.textContent='Salvar produto'}
+};
+window.removeProduct=async id=>{
+  const p=products.find(x=>x.id===id);if(!confirm('Excluir “'+(p?.name||'este produto')+'”?'))return;
+  const {error}=await sb.from('moto_click_products').delete().eq('id',id);if(error)return alert('Erro ao excluir: '+error.message);await loadProducts()
+};
+boot();
+</script>
+</body></html>
