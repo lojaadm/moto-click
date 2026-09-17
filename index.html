@@ -1,55 +1,211 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#03070d"><title>Moto Click | Peças para sua moto</title><style>
-:root{--bg:#03070d;--p:#08111c;--p2:#0c1724;--line:#172638;--txt:#f7f9fc;--mut:#9cafc3;--b:#087dff;--g:#24c96b}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#03070d;color:var(--txt);font-family:Inter,Segoe UI,Arial,sans-serif}a{color:inherit;text-decoration:none}button,input{font:inherit}.wrap{width:min(1180px,calc(100% - 32px));margin:auto}.top{position:sticky;top:0;z-index:20;background:rgba(3,7,13,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.head{height:88px;display:grid;grid-template-columns:190px 1fr auto;gap:22px;align-items:center}.logo{width:178px;height:70px;object-fit:contain}.search{height:46px;border:1px solid #2a3748;background:#0b111a;border-radius:30px;display:flex;align-items:center;padding:0 16px;gap:10px}.search input{border:0;outline:0;background:none;color:white;width:100%}.actions{display:flex;gap:22px;align-items:center}.act{font-size:14px;white-space:nowrap}.cartlink{position:relative}.badge{position:absolute;top:-15px;right:-12px;background:var(--b);width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:800}.nav{border-top:1px solid #101a27}.navin{height:58px;display:flex;align-items:center;gap:8px}.navin a,.navin button{border:0;background:none;color:white;padding:18px 20px;cursor:pointer}.navin .cats{padding-left:0;border-right:1px solid #203044;font-weight:700}.navin .secure{margin-left:auto;color:#b7c4d3;font-size:12px}.hero{position:relative;min-height:340px;overflow:hidden;border-bottom:1px solid #102033;background:#020814}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#02070e 0,#02070e 38%,rgba(2,7,14,.68) 55%,rgba(2,7,14,.1) 100%),url('assets/hero.svg') right center/60% 100% no-repeat}.hero .content{position:relative;z-index:2;padding:48px 0;max-width:620px}.hero h1{font-size:clamp(42px,5.5vw,70px);line-height:.96;margin:0;letter-spacing:-2px}.hero h1 span{display:block;color:var(--b)}.hero p{font-size:20px;color:#d6deea}.benefits{display:flex;gap:24px;flex-wrap:wrap;margin-top:28px}.benefit{display:flex;align-items:center;gap:9px;font-size:13px;max-width:175px}.benefit b{font-size:27px;color:#1991ff}.section{padding:28px 0}.title{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.title h2{font-size:30px;margin:0}.more{color:#168cff;font-weight:700;font-size:14px}.catgrid{display:grid;grid-template-columns:repeat(8,1fr);gap:12px}.cat{min-height:105px;border:1px solid #16253a;background:linear-gradient(#0d1825,#08111b);border-radius:11px;color:white;display:grid;place-items:center;text-align:center;cursor:pointer}.cat:hover{border-color:#1977df;transform:translateY(-2px)}.cat i{display:block;font-style:normal;color:#208fff;font-size:30px;margin-bottom:6px}.cat span{font-size:13px;font-weight:700}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{border:1px solid #16253a;background:linear-gradient(#0c1622,#08111b);border-radius:12px;overflow:hidden}.pic{height:175px;background:radial-gradient(circle at center,#14253a 0,#07101a 70%);display:grid;place-items:center;font-size:72px}.body{padding:16px}.body h3{font-size:15px;margin:0 0 5px}.body small{color:#aeb9c7}.price{font-size:21px;color:#90d0ff;font-weight:800;margin:15px 0}.btn{width:100%;border:0;border-radius:8px;padding:12px 14px;font-weight:800;cursor:pointer}.primary{background:linear-gradient(90deg,#0872ee,#0689ff);color:white}.primary:hover{filter:brightness(1.12)}.checkout{display:grid;grid-template-columns:1.25fr .9fr;gap:18px;padding:8px 0 38px}.box{border:1px solid #122642;background:linear-gradient(#07121f,#06101a);border-radius:14px;overflow:hidden}.boxhead{padding:18px 20px;border-bottom:1px solid #172638;display:flex;justify-content:space-between}.boxhead h3{margin:0}.clear{border:0;background:none;color:#bac7d6;cursor:pointer}.cartlist{padding:0 20px}.row{display:grid;grid-template-columns:45px 1fr auto auto auto;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid #142336}.thumb{width:45px;height:45px;border-radius:8px;background:#13263c;display:grid;place-items:center}.row strong{font-size:13px;display:block}.row small{color:#9eb0c4}.qty{display:flex;border:1px solid #1d3047;border-radius:7px;overflow:hidden}.qty button{background:#0a1420;border:0;color:white;width:29px;height:32px;cursor:pointer}.qty span{width:32px;display:grid;place-items:center;font-size:13px}.rprice{font-weight:800;font-size:13px}.del{border:0;background:none;color:#71839b;cursor:pointer}.total{padding:18px 20px}.totline{display:flex;justify-content:space-between;margin-bottom:14px}.totline b{font-size:23px;color:#1489ff}.empty{padding:30px 0;text-align:center;color:#90a3ba}.help{padding:28px}.help h3{margin:0;font-size:21px}.help h3 span{color:#168aff}.help p{color:#c3cfdb;line-height:1.55;font-size:14px}.steps{display:grid;gap:12px;margin:22px 0}.step{display:flex;gap:12px;align-items:center;font-size:14px}.n{background:#0d7ef5;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-weight:800}.wa{background:linear-gradient(90deg,#16af51,#28cf67);color:white;font-size:17px}.footer{border-top:1px solid #13233a;padding:30px 0 40px}.foot{display:grid;grid-template-columns:1fr 1px 1fr 1fr;gap:28px;align-items:center}.foot .line{height:85px;background:#26374a}.foot h4{margin:0 0 8px}.foot p{color:#9cacbf;font-size:13px}.outline{background:transparent;color:white;border:1px solid #1675eb}.flogo{justify-self:end;width:220px;height:110px;object-fit:contain}.toast{position:fixed;right:18px;bottom:18px;background:#0d1a29;border:1px solid #1e6bb4;padding:12px 16px;border-radius:10px;opacity:0;transform:translateY(16px);transition:.2s;z-index:40}.toast.show{opacity:1;transform:none}
-@media(max-width:900px){.head{grid-template-columns:125px 1fr auto}.logo{width:120px}.catgrid{grid-template-columns:repeat(4,1fr)}.products{grid-template-columns:repeat(2,1fr)}.checkout{grid-template-columns:1fr}.navin a:nth-of-type(n+3){display:none}}@media(max-width:620px){.head{height:72px;grid-template-columns:95px 1fr auto;gap:8px}.logo{width:92px}.actions .account{display:none}.nav{display:none}.hero{min-height:500px}.hero:before{background:linear-gradient(180deg,rgba(2,7,14,.08),#02070e 58%,#02070e),url('assets/hero.svg') center top/cover no-repeat}.hero .content{padding-top:285px}.hero h1{font-size:42px}.catgrid{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:1fr}.pic{height:210px}.checkout{grid-template-columns:1fr}.foot{grid-template-columns:1fr}.foot .line{display:none}.flogo{justify-self:start}.row{grid-template-columns:42px 1fr auto}.qty{grid-column:2}.rprice{grid-column:3;grid-row:1/3}.del{display:none}}
-.pic img{width:100%;height:100%;object-fit:cover}.stock{font-size:12px;color:#7fc5ff;margin-top:7px}.stock.out{color:#ff8a8a}.btn:disabled{opacity:.45;cursor:not-allowed}
-</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script></head><body>
-<header class="top"><div class="wrap head"><img class="logo" src="assets/logo.svg" alt="Moto Click"><label class="search">⌕ <input id="search" placeholder="Busque por nome, código ou modelo da peça..."></label><div class="actions"><a class="act account" href="admin.html">⚙ ADM</a><a class="act cartlink" href="#carrinho">🛒 Carrinho <span id="badge" class="badge">0</span></a></div></div><div class="nav"><div class="wrap navin"><button class="cats">☰ &nbsp; Todas as categorias⌄</button><a href="#">⌂ &nbsp; Início</a><a href="#carrinho">▣ &nbsp; Meus pedidos</a><a href="#contato">☵ &nbsp; Fale conosco</a><span class="secure">🔒 <b>Compra segura</b> · Seus dados protegidos</span></div></div></header>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#03070d">
+<title>Moto Click | Peças para sua moto</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+:root{--bg:#03070d;--p:#08111c;--p2:#0c1724;--line:#172638;--txt:#f7f9fc;--mut:#9cafc3;--b:#087dff;--g:#24c96b;--red:#ef5350}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#03070d;color:var(--txt);font-family:Inter,Segoe UI,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+.wrap{width:min(1180px,calc(100% - 32px));margin:auto}
+.top{position:sticky;top:0;z-index:30;background:rgba(3,7,13,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.head{height:88px;display:grid;grid-template-columns:190px 1fr auto;gap:22px;align-items:center}
+.logo{width:178px;height:70px;object-fit:contain}
+.search{height:46px;border:1px solid #2a3748;background:#0b111a;border-radius:30px;display:flex;align-items:center;padding:0 16px;gap:10px}
+.search input{border:0;outline:0;background:none;color:white;width:100%}
+.actions{display:flex;gap:18px;align-items:center}
+.act{border:0;background:none;color:white;font-size:14px;white-space:nowrap;padding:8px;cursor:pointer}
+.act.user-on{color:#83c8ff}
+.cartlink{position:relative}
+.badge{position:absolute;top:-9px;right:-10px;background:var(--b);width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:800}
+.nav{border-top:1px solid #101a27}
+.navin{height:58px;display:flex;align-items:center;gap:8px}
+.navin a,.navin button{border:0;background:none;color:white;padding:18px 20px;cursor:pointer}
+.navin .cats{padding-left:0;border-right:1px solid #203044;font-weight:700}
+.navin .secure{margin-left:auto;color:#b7c4d3;font-size:12px}
+.account-strip{display:none;border-top:1px solid #14243a;background:#06101a}
+.account-strip.open{display:block}
+.account-inner{padding:24px 0}
+.account-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.account-card{background:linear-gradient(180deg,#0b1724,#07111c);border:1px solid #1a2d45;border-radius:14px;padding:20px}
+.account-card h3{margin:0 0 6px;font-size:22px}
+.mut{color:var(--mut);font-size:13px}
+.field{display:grid;gap:6px;margin:12px 0}
+.field label{font-size:12px;color:#c9d6e4;font-weight:700}
+.field input,.field select,.field textarea{width:100%;border:1px solid #253a52;background:#07101a;color:white;border-radius:9px;padding:11px 12px;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--b)}
+.field textarea{min-height:92px;resize:vertical}
+.account-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.inline-link{border:0;background:none;color:#66b7ff;padding:6px 0;font-weight:700}
+.account-msg{margin-top:12px;color:#9fd2ff;font-size:13px;min-height:18px}
+.hero{position:relative;min-height:340px;overflow:hidden;border-bottom:1px solid #102033;background:#020814}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#02070e 0,#02070e 38%,rgba(2,7,14,.68) 55%,rgba(2,7,14,.1) 100%),url('assets/hero.svg') right center/60% 100% no-repeat}
+.hero .content{position:relative;z-index:2;padding:48px 0;max-width:620px}
+.hero h1{font-size:clamp(42px,5.5vw,70px);line-height:.96;margin:0;letter-spacing:-2px}
+.hero h1 span{display:block;color:var(--b)}
+.hero p{font-size:20px;color:#d6deea}
+.benefits{display:flex;gap:24px;flex-wrap:wrap;margin-top:28px}
+.benefit{display:flex;align-items:center;gap:9px;font-size:13px;max-width:175px}
+.benefit b{font-size:27px;color:#1991ff}
+.section{padding:28px 0}
+.title{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:16px}
+.title h2{font-size:30px;margin:0}
+.more{color:#168cff;font-weight:700;font-size:14px}
+.catgrid{display:grid;grid-template-columns:repeat(8,1fr);gap:12px}
+.cat{min-height:105px;border:1px solid #16253a;background:linear-gradient(#0d1825,#08111b);border-radius:11px;color:white;display:grid;place-items:center;text-align:center;cursor:pointer;transition:.2s}
+.cat:hover{border-color:#1977df;transform:translateY(-2px)}
+.cat i{display:block;font-style:normal;color:#208fff;font-size:30px;margin-bottom:6px}
+.cat span{font-size:13px;font-weight:700}
+.admin-area{display:none;padding:28px 0 8px}
+.admin-area.show{display:block}
+.admin-shell{border:1px solid #1a3a5d;background:linear-gradient(180deg,#07182a,#06101a);border-radius:16px;overflow:hidden}
+.admin-head{padding:18px 20px;border-bottom:1px solid #18304b;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.admin-head h2{margin:0;font-size:24px}
+.admin-badge{font-size:11px;font-weight:800;letter-spacing:.7px;color:#8fd1ff;background:#0e3760;border:1px solid #1d619f;border-radius:999px;padding:5px 9px}
+.admin-head .sp{flex:1}
+.admin-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#18304b}
+.admin-stat{background:#07121e;padding:16px 20px}
+.admin-stat b{font-size:26px;color:#7dc7ff;display:block}
+.admin-stat span{font-size:12px;color:var(--mut)}
+.editor{display:none;padding:22px 20px;border-top:1px solid #18304b}
+.editor.open{display:block}
+.editor h3{margin:0 0 4px;font-size:22px}
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px}
+.full{grid-column:1/-1}
+.checks{display:flex;gap:18px;align-items:center;flex-wrap:wrap;padding-top:4px}
+.checks label{display:flex;gap:8px;align-items:center;color:#dbe7f4;font-size:13px}
+.checks input{width:auto}
+.images{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.iprev{width:100px;height:84px;border-radius:9px;overflow:hidden;position:relative;border:1px solid #263b55;background:#08131f}
+.iprev img{width:100%;height:100%;object-fit:cover}
+.iprev button{position:absolute;right:4px;top:4px;border:0;border-radius:50%;width:25px;height:25px;background:#a91423;color:white}
+.form-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:18px}
+.admin-note{padding:13px 20px;background:#081522;border-top:1px solid #18304b;color:#9db5cc;font-size:12px}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{border:1px solid #16253a;background:linear-gradient(#0c1622,#08111b);border-radius:12px;overflow:hidden;position:relative}
+.card.admin-hidden{opacity:.72}
+.pic{height:175px;background:radial-gradient(circle at center,#14253a 0,#07101a 70%);display:grid;place-items:center;font-size:72px;overflow:hidden}
+.pic img{width:100%;height:100%;object-fit:cover}
+.body{padding:16px}
+.body h3{font-size:15px;margin:0 0 5px}
+.body small{color:#aeb9c7}
+.price{font-size:21px;color:#90d0ff;font-weight:800;margin:15px 0 6px}
+.stock{font-size:12px;color:#7fc5ff;margin-bottom:13px}
+.stock.out{color:#ff8a8a}
+.state-tag{position:absolute;left:10px;top:10px;background:#3d2024;color:#ffb5bb;border:1px solid #76323a;border-radius:999px;padding:5px 8px;font-size:10px;font-weight:800;z-index:2}
+.btn{border:0;border-radius:8px;padding:12px 14px;font-weight:800;cursor:pointer}
+.btn.wide{width:100%}
+.primary{background:linear-gradient(90deg,#0872ee,#0689ff);color:white}
+.primary:hover{filter:brightness(1.12)}
+.ghost{background:#0d1a29;color:#dce8f5;border:1px solid #29445f}
+.danger{background:#341319;color:#ff9ca5;border:1px solid #65232c}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.admin-card-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:9px}
+.admin-card-actions .btn{font-size:12px;padding:9px 10px}
+.checkout{display:grid;grid-template-columns:1.25fr .9fr;gap:18px;padding:8px 0 38px}
+.box{border:1px solid #122642;background:linear-gradient(#07121f,#06101a);border-radius:14px;overflow:hidden}
+.boxhead{padding:18px 20px;border-bottom:1px solid #172638;display:flex;justify-content:space-between}
+.boxhead h3{margin:0}
+.clear{border:0;background:none;color:#bac7d6;cursor:pointer}
+.cartlist{padding:0 20px}
+.row{display:grid;grid-template-columns:45px 1fr auto auto auto;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid #142336}
+.thumb{width:45px;height:45px;border-radius:8px;background:#13263c;display:grid;place-items:center;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.row strong{font-size:13px;display:block}
+.row small{color:#9eb0c4}
+.qty{display:flex;border:1px solid #1d3047;border-radius:7px;overflow:hidden}
+.qty button{background:#0a1420;border:0;color:white;width:29px;height:32px;cursor:pointer}
+.qty span{width:32px;display:grid;place-items:center;font-size:13px}
+.rprice{font-weight:800;font-size:13px}
+.del{border:0;background:none;color:#71839b;cursor:pointer}
+.total{padding:18px 20px}
+.totline{display:flex;justify-content:space-between;margin-bottom:14px}
+.totline b{font-size:23px;color:#1489ff}
+.empty{padding:30px 0;text-align:center;color:#90a3ba}
+.help{padding:28px}
+.help h3{margin:0;font-size:21px}
+.help h3 span{color:#168aff}
+.help p{color:#c3cfdb;line-height:1.55;font-size:14px}
+.steps{display:grid;gap:12px;margin:22px 0}
+.step{display:flex;gap:12px;align-items:center;font-size:14px}
+.n{background:#0d7ef5;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-weight:800}
+.wa{background:linear-gradient(90deg,#16af51,#28cf67);color:white;font-size:17px;width:100%}
+.footer{border-top:1px solid #13233a;padding:30px 0 40px}
+.foot{display:grid;grid-template-columns:1fr 1px 1fr 1fr;gap:28px;align-items:center}
+.foot .line{height:85px;background:#26374a}
+.foot h4{margin:0 0 8px}
+.foot p{color:#9cacbf;font-size:13px}
+.outline{background:transparent;color:white;border:1px solid #1675eb;min-width:220px}
+.flogo{justify-self:end;width:220px;height:110px;object-fit:contain}
+.toast{position:fixed;right:18px;bottom:18px;background:#0d1a29;border:1px solid #1e6bb4;padding:12px 16px;border-radius:10px;opacity:0;transform:translateY(16px);transition:.2s;z-index:60;max-width:360px}
+.toast.show{opacity:1;transform:none}
+@media(max-width:900px){.head{grid-template-columns:125px 1fr auto}.logo{width:120px}.catgrid{grid-template-columns:repeat(4,1fr)}.products{grid-template-columns:repeat(2,1fr)}.checkout{grid-template-columns:1fr}.navin a:nth-of-type(n+3){display:none}.account-grid{grid-template-columns:1fr}.admin-stats{grid-template-columns:1fr 1fr 1fr}}
+@media(max-width:620px){.wrap{width:min(100% - 22px,1180px)}.head{height:72px;grid-template-columns:92px 1fr auto;gap:8px}.logo{width:90px}.search{padding:0 10px}.actions{gap:5px}.act .label{display:none}.nav{display:none}.hero{min-height:500px}.hero:before{background:linear-gradient(180deg,rgba(2,7,14,.08),#02070e 58%,#02070e),url('assets/hero.svg') center top/cover no-repeat}.hero .content{padding-top:285px}.hero h1{font-size:42px}.catgrid{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:1fr}.pic{height:210px}.foot{grid-template-columns:1fr}.foot .line{display:none}.flogo{justify-self:start}.row{grid-template-columns:42px 1fr auto}.qty{grid-column:2}.rprice{grid-column:3;grid-row:1/3}.del{display:none}.formgrid{grid-template-columns:1fr}.full{grid-column:auto}.admin-stats{grid-template-columns:1fr}.admin-head{align-items:flex-start}.form-actions{flex-direction:column}.form-actions .btn{width:100%}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap head">
+    <img class="logo" src="assets/logo.svg" alt="Moto Click">
+    <label class="search">⌕ <input id="search" placeholder="Busque por nome, código ou modelo da peça..."></label>
+    <div class="actions">
+      <button id="accountButton" class="act">♙ <span class="label">Entrar</span></button>
+      <a class="act cartlink" href="#carrinho">🛒 <span class="label">Carrinho</span><span id="badge" class="badge">0</span></a>
+    </div>
+  </div>
+  <div class="nav"><div class="wrap navin"><button class="cats">☰ &nbsp; Todas as categorias⌄</button><a href="#">⌂ &nbsp; Início</a><a href="#carrinho">▣ &nbsp; Meus pedidos</a><button id="contactNav">☵ &nbsp; Fale conosco</button><span class="secure">🔒 <b>Compra segura</b> · Seus dados protegidos</span></div></div>
+  <section id="accountStrip" class="account-strip"><div class="wrap account-inner">
+    <div id="accountLoggedOut" class="account-grid">
+      <section class="account-card"><h3>Entrar</h3><p class="mut">Use seu usuário e senha. O acesso identifica automaticamente cliente ou administrador.</p><form id="loginForm"><div class="field"><label>Usuário</label><input id="loginUsername" autocomplete="username" required></div><div class="field"><label>Senha</label><input id="loginPassword" type="password" autocomplete="current-password" required></div><div class="account-actions"><button id="loginBtn" class="btn primary" type="submit">Entrar</button></div></form><div id="loginMsg" class="account-msg"></div></section>
+      <section class="account-card"><div id="registerIntro"><h3>Ainda não tem conta?</h3><p class="mut">Crie seu cadastro para usar a mesma área de acesso da loja.</p><button id="showRegister" class="inline-link">Criar conta</button></div><form id="registerForm" style="display:none"><h3>Criar conta</h3><div class="field"><label>Nome</label><input id="regName" autocomplete="name" required></div><div class="field"><label>Nome de usuário</label><input id="regUsername" autocomplete="username" required></div><div class="field"><label>Senha</label><input id="regPassword" type="password" autocomplete="new-password" minlength="6" required></div><div class="account-actions"><button class="btn primary" type="submit">Criar conta</button><button id="cancelRegister" class="btn ghost" type="button">Voltar</button></div><div id="registerMsg" class="account-msg"></div></form></section>
+    </div>
+    <section id="accountLoggedIn" class="account-card" style="display:none"><h3 id="accountGreeting">Minha conta</h3><p id="accountInfo" class="mut"></p><div class="account-actions"><button id="closeAccount" class="btn ghost">Continuar comprando</button><button id="logoutBtn" class="btn danger">Sair</button></div></section>
+  </div></section>
+</header>
 <section class="hero"><div class="wrap content"><h1>AS MELHORES <span>PEÇAS PARA SUA MOTO</span></h1><p>Qualidade, agilidade e praticidade.</p><div class="benefits"><div class="benefit"><b>⚙</b> Peças originais e paralelas de qualidade</div><div class="benefit"><b>▣</b> Entrega rápida (consultar região)</div><div class="benefit"><b>♢</b> Compra segura e confiável</div></div></div></section>
-<main><section class="section"><div class="wrap"><div class="title"><h2>Categorias</h2><a class="more" href="#produtos">Ver todas →</a></div><div class="catgrid"><button class="cat" data-cat="Motor"><div><i>⚙</i><span>Motor</span></div></button><button class="cat" data-cat="Elétrica"><div><i>ϟ</i><span>Elétrica</span></div></button><button class="cat" data-cat="Freios"><div><i>◉</i><span>Freios</span></div></button><button class="cat" data-cat="Suspensão"><div><i>⌁</i><span>Suspensão</span></div></button><button class="cat" data-cat="Transmissão"><div><i>⛓</i><span>Transmissão</span></div></button><button class="cat" data-cat="Carenagem"><div><i>➤</i><span>Carenagem</span></div></button><button class="cat" data-cat="Acessórios"><div><i>⌘</i><span>Acessórios</span></div></button><button class="cat" data-cat=""><div><i>✺</i><span>Diversos</span></div></button></div></div></section>
-<section class="section" id="produtos"><div class="wrap"><div class="title"><h2>Peças em destaque</h2><a class="more" href="#produtos">Ver todos →</a></div><div id="grid" class="products"></div></div></section>
-<section class="wrap checkout" id="carrinho"><div class="box"><div class="boxhead"><h3>🛒 Meu carrinho</h3><button id="clear" class="clear">⌫ Limpar carrinho</button></div><div id="cart" class="cartlist"></div><div class="total"><div class="totline"><span id="items">Total (0 itens)</span><b id="sum">R$ 0,00</b></div><button id="finish" class="btn primary">🛒 Finalizar pedido</button></div></div><aside class="box help" id="contato"><h3>Pronto! Agora é só me avisar:<br><span>“Fatura minhas peças”</span></h3><p>Depois de adicionar os itens ao carrinho, fale com a Moto Click pelo WhatsApp. Confirmamos o pedido, o valor final e a forma de pagamento.</p><div class="steps"><div class="step"><span class="n">1</span>Adicione as peças no carrinho</div><div class="step"><span class="n">2</span>Envie “Fatura minhas peças”</div><div class="step"><span class="n">3</span>Receba a confirmação do pedido</div></div><button id="wa" class="btn wa">◉ Chamar no WhatsApp</button></aside></section></main>
-<footer class="footer" id="conta"><div class="wrap foot"><div><h4>Administração Moto Click</h4><p>Cadastre produtos, altere preços, estoque e fotos pelo painel administrativo.</p><a class="btn outline" style="display:inline-block;text-align:center" href="admin.html">⚙ Entrar como ADM</a></div><div class="line"></div><div><h4>Precisa de atendimento?</h4><p>Adicione os produtos ao carrinho e envie sua lista para a Moto Click.</p><a class="btn primary" style="display:inline-block;text-align:center" href="#contato">Fale conosco</a></div><img class="flogo" src="assets/logo.svg" alt="Moto Click"></div></footer><div id="toast" class="toast"></div>
+<main>
+<section class="section"><div class="wrap"><div class="title"><h2>Categorias</h2><a class="more" href="#produtos">Ver todas →</a></div><div class="catgrid"><button class="cat" data-cat="Motor"><div><i>⚙</i><span>Motor</span></div></button><button class="cat" data-cat="Elétrica"><div><i>ϟ</i><span>Elétrica</span></div></button><button class="cat" data-cat="Freios"><div><i>◉</i><span>Freios</span></div></button><button class="cat" data-cat="Suspensão"><div><i>⌁</i><span>Suspensão</span></div></button><button class="cat" data-cat="Transmissão"><div><i>⛓</i><span>Transmissão</span></div></button><button class="cat" data-cat="Carenagem"><div><i>➤</i><span>Carenagem</span></div></button><button class="cat" data-cat="Acessórios"><div><i>⌘</i><span>Acessórios</span></div></button><button class="cat" data-cat=""><div><i>✺</i><span>Diversos</span></div></button></div></div></section>
+<section id="adminArea" class="admin-area"><div class="wrap admin-shell"><div class="admin-head"><h2>Gestão do catálogo</h2><span class="admin-badge">ADMINISTRAÇÃO ATIVA</span><span class="sp"></span><button id="newProductBtn" class="btn primary">＋ Novo produto</button></div><div class="admin-stats"><div class="admin-stat"><b id="stTotal">0</b><span>Produtos cadastrados</span></div><div class="admin-stat"><b id="stActive">0</b><span>Produtos ativos</span></div><div class="admin-stat"><b id="stLow">0</b><span>Estoque baixo (≤ 5)</span></div></div><section id="adminEditor" class="editor"><h3 id="editorTitle">Novo produto</h3><p class="mut" style="margin-top:4px">Edite tudo aqui na própria página. Nada abre em janela separada.</p><form id="productForm"><div class="formgrid"><div class="field"><label>Nome do produto *</label><input id="fName" required></div><div class="field"><label>Código / SKU</label><input id="fSku"></div><div class="field"><label>Modelo / aplicação</label><input id="fModel" placeholder="Ex.: CG 160 / Titan 150"></div><div class="field"><label>Categoria</label><select id="fCategory"><option>Motor</option><option>Elétrica</option><option>Freios</option><option>Suspensão</option><option>Transmissão</option><option>Carenagem</option><option>Acessórios</option><option>Diversos</option></select></div><div class="field"><label>Preço (R$) *</label><input id="fPrice" type="number" min="0" step="0.01" required></div><div class="field"><label>Estoque</label><input id="fStock" type="number" min="0" step="1" value="0"></div><div class="field full"><label>Descrição</label><textarea id="fDescription"></textarea></div><div class="field full"><label>Fotos do produto</label><input id="fImages" type="file" accept="image/jpeg,image/png,image/webp,image/gif" multiple><span class="mut">JPG, PNG, WebP ou GIF — até 5 MB por foto.</span><div id="existingImages" class="images"></div></div><div class="full checks"><label><input id="fFeatured" type="checkbox"> Produto em destaque</label><label><input id="fActive" type="checkbox" checked> Produto ativo na loja</label></div></div><div class="form-actions"><button id="cancelEditBtn" type="button" class="btn ghost">Cancelar edição</button><button id="saveProductBtn" type="submit" class="btn primary">Salvar produto</button></div></form></section><div class="admin-note">As alterações salvas aparecem no catálogo da loja. Produtos ocultos continuam visíveis somente para você enquanto estiver conectado como administrador.</div></div></section>
+<section class="section" id="produtos"><div class="wrap"><div class="title"><h2 id="productsTitle">Peças em destaque</h2><a class="more" href="#produtos">Ver todos →</a></div><div id="grid" class="products"></div></div></section>
+<section class="wrap checkout" id="carrinho"><div class="box"><div class="boxhead"><h3>🛒 Meu carrinho</h3><button id="clear" class="clear">⌫ Limpar carrinho</button></div><div id="cart" class="cartlist"></div><div class="total"><div class="totline"><span id="items">Total (0 itens)</span><b id="sum">R$ 0,00</b></div><button id="finish" class="btn primary wide">🛒 Finalizar pedido</button></div></div><aside class="box help" id="contato"><h3>Pronto! Agora é só me avisar:<br><span>“Fatura minhas peças”</span></h3><p>Depois de adicionar os itens ao carrinho, fale com a Moto Click pelo WhatsApp. Confirmamos o pedido, o valor final e a forma de pagamento.</p><div class="steps"><div class="step"><span class="n">1</span>Adicione as peças no carrinho</div><div class="step"><span class="n">2</span>Envie “Fatura minhas peças”</div><div class="step"><span class="n">3</span>Receba a confirmação do pedido</div></div><button id="wa" class="btn wa">◉ Chamar no WhatsApp</button></aside></section>
+</main>
+<footer class="footer" id="conta"><div class="wrap foot"><div><h4>Já tem uma conta?</h4><p>Entre com seu usuário e senha para acessar sua conta.</p><button id="footerLogin" class="btn outline">♙ Entrar</button></div><div class="line"></div><div><h4>Ainda não tem cadastro?</h4><p>Crie sua conta e tenha uma experiência mais prática na loja.</p><button id="footerRegister" class="btn primary" style="min-width:220px">Criar conta</button></div><img class="flogo" src="assets/logo.svg" alt="Moto Click"></div></footer><div id="toast" class="toast"></div>
 <script>
-
-const SB_URL="https://lvoizfpdpvcqqhsrmflu.supabase.co", SB_KEY="sb_publishable_EjEA70CvIvAiU_v20wrL1A_F1jxNQmX";
-const sb=window.supabase.createClient(SB_URL,SB_KEY);
-let P=[], C=JSON.parse(localStorage.getItem('mc_cart')||'{}'), cat='';
-const icons={'Motor':'⚙','Elétrica':'ϟ','Freios':'◉','Suspensão':'⌁','Transmissão':'⛓','Carenagem':'➤','Acessórios':'⌘','Diversos':'✺'};
-const money=v=>Number(v||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
-function note(m){let t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(window.tt);window.tt=setTimeout(()=>t.classList.remove('show'),2500)}
-function pic(p){const u=p.image_urls&&p.image_urls[0];return u?`<img src="${u}" alt="${escapeHtml(p.name)}" loading="lazy">`:(icons[p.category]||'⚙')}
-function escapeHtml(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]))}
-async function loadProducts(){
-  grid.innerHTML='<div class="empty">Carregando produtos...</div>';
-  const {data,error}=await sb.from('moto_click_products').select('*').eq('active',true).order('featured',{ascending:false}).order('created_at',{ascending:false});
-  if(error){console.error(error);grid.innerHTML='<div class="empty">Não foi possível carregar os produtos. Atualize a página.</div>';return}
-  P=(data||[]).map(p=>({...p,price:Number(p.price),stock:Number(p.stock||0),cat:p.category||'Diversos'}));
-  products();render();
-}
-function products(q=''){
-  q=q.toLowerCase();
-  let a=P.filter(p=>(!cat||p.cat===cat)&&(p.name+' '+p.model+' '+p.sku+' '+p.cat).toLowerCase().includes(q));
-  grid.innerHTML=a.length?a.map(p=>`<article class="card"><div class="pic">${pic(p)}</div><div class="body"><h3>${escapeHtml(p.name)}</h3><small>${p.model?'('+escapeHtml(p.model)+')':''}</small><div class="stock ${p.stock<=0?'out':''}">${p.stock>0?'Disponível':'Indisponível'}</div><div class="price">${money(p.price)}</div><button class="btn primary" ${p.stock<=0?'disabled':''} onclick="add('${p.id}')">🛒 Adicionar ao carrinho</button></div></article>`).join(''):'<div class="empty">Nenhum produto encontrado.</div>'
-}
-function add(id){const p=P.find(x=>x.id===id);if(!p||p.stock<=0)return note('Produto indisponível.');C[id]=Math.min((C[id]||0)+1,p.stock);save();note('Produto adicionado ao carrinho.')}
-function qty(id,d){const p=P.find(x=>x.id===id);if(!p)return;C[id]=Math.min((C[id]||0)+d,p.stock);if(C[id]<=0)delete C[id];save()}
-function save(){localStorage.setItem('mc_cart',JSON.stringify(C));render()}
-function render(){
-  let a=Object.entries(C).filter(x=>x[1]>0).map(([id,q])=>[P.find(p=>p.id===id),q]).filter(x=>x[0]);
-  let n=a.reduce((s,x)=>s+x[1],0),tot=a.reduce((s,[p,q])=>s+p.price*q,0);
-  badge.textContent=n;items.textContent=`Total (${n} ${n===1?'item':'itens'})`;sum.textContent=money(tot);
-  cart.innerHTML=a.length?a.map(([p,q])=>`<div class="row"><div class="thumb">${p.image_urls&&p.image_urls[0]?`<img src="${p.image_urls[0]}" style="width:100%;height:100%;object-fit:cover;border-radius:8px">`:(icons[p.cat]||'⚙')}</div><div><strong>${escapeHtml(p.name)}</strong><small>${p.model?'('+escapeHtml(p.model)+')':''}</small></div><div class="qty"><button onclick="qty('${p.id}',-1)">−</button><span>${q}</span><button onclick="qty('${p.id}',1)">+</button></div><div class="rprice">${money(p.price*q)}</div><button class="del" onclick="delete C['${p.id}'];save()">⌫</button></div>`).join(''):'<div class="empty">Seu carrinho está vazio. Adicione uma peça acima.</div>'
-}
-function order(){
-  let a=Object.entries(C).filter(x=>x[1]>0).map(([id,q])=>[P.find(p=>p.id===id),q]).filter(x=>x[0]);
-  if(!a.length)return note('Adicione pelo menos um produto ao carrinho.');
-  let tot=a.reduce((s,[p,q])=>s+p.price*q,0),m='Olá, Moto Click! Quero faturar minhas peças:\n\n'+a.map(([p,q])=>`• ${q}x ${p.name}${p.model?' ('+p.model+')':''} — ${money(p.price*q)}`).join('\n')+`\n\nTotal dos itens: ${money(tot)}`;
-  navigator.clipboard?.writeText(m);note('Pedido copiado. Me passe o WhatsApp da loja para ativar o envio automático.')
-}
-search.oninput=e=>products(e.target.value);
-document.querySelectorAll('.cat').forEach(b=>b.onclick=()=>{cat=b.dataset.cat;search.value='';products();document.getElementById('produtos').scrollIntoView({behavior:'smooth'})});
-clear.onclick=()=>{C={};save();note('Carrinho limpo.')};
-finish.onclick=order;wa.onclick=order;
-loadProducts();
-
-</script></body></html>
+const SB_URL="https://lvoizfpdpvcqqhsrmflu.supabase.co";
+const SB_KEY="sb_publishable_EjEA70CvIvAiU_v20wrL1A_F1jxNQmX";
+const sb=window.supabase.createClient(SB_URL,SB_KEY,{auth:{persistSession:false,autoRefreshToken:false}});
+const SESSION_KEY='mc_site_session';let session=JSON.parse(sessionStorage.getItem(SESSION_KEY)||'null');let P=[],C=JSON.parse(localStorage.getItem('mc_cart')||'{}'),cat='';let editing=null,currentImages=[];const $=id=>document.getElementById(id);const icons={'Motor':'⚙','Elétrica':'ϟ','Freios':'◉','Suspensão':'⌁','Transmissão':'⛓','Carenagem':'➤','Acessórios':'⌘','Diversos':'✺'};const money=v=>Number(v||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+function note(m){const t=$('toast');t.textContent=m;t.classList.add('show');clearTimeout(window.__toast);window.__toast=setTimeout(()=>t.classList.remove('show'),2600)}
+function saveSession(){if(session)sessionStorage.setItem(SESSION_KEY,JSON.stringify(session));else sessionStorage.removeItem(SESSION_KEY)}
+function openAccount(mode='login'){$('accountStrip').classList.add('open');if(!session&&mode==='register'){$('registerIntro').style.display='none';$('registerForm').style.display='block'}setTimeout(()=>$('accountStrip').scrollIntoView({behavior:'smooth',block:'nearest'}),30)}function closeAccount(){$('accountStrip').classList.remove('open')}
+$('accountButton').onclick=()=>$('accountStrip').classList.toggle('open');$('footerLogin').onclick=()=>openAccount('login');$('footerRegister').onclick=()=>openAccount('register');$('closeAccount').onclick=closeAccount;$('contactNav').onclick=()=>document.getElementById('contato').scrollIntoView({behavior:'smooth'});$('showRegister').onclick=()=>{$('registerIntro').style.display='none';$('registerForm').style.display='block'};$('cancelRegister').onclick=()=>{$('registerForm').style.display='none';$('registerIntro').style.display='block'};
+async function validateSession(){if(!session?.token||!session?.role){session=null;saveSession();return false}const fn=session.role==='admin'?'moto_click_admin_valid':'moto_click_customer_valid';const {data,error}=await sb.rpc(fn,{p_token:session.token});if(error||data!==true){session=null;saveSession();return false}return true}
+function paintAccount(){const logged=!!session;$('accountLoggedOut').style.display=logged?'none':'grid';$('accountLoggedIn').style.display=logged?'block':'none';$('accountButton').classList.toggle('user-on',logged);$('accountButton').innerHTML=logged?`♙ <span class="label">${esc(session.display_name||session.username)}</span>`:'♙ <span class="label">Entrar</span>';if(logged){$('accountGreeting').textContent=`Olá, ${session.display_name||session.username}`;$('accountInfo').textContent=session.role==='admin'?'Você está conectado com acesso administrativo. As ferramentas de edição aparecem diretamente no catálogo.':`Usuário: ${session.username}`}$('adminArea').classList.toggle('show',session?.role==='admin');$('productsTitle').textContent=session?.role==='admin'?'Catálogo da loja':'Peças em destaque'}
+async function login(username,password){const {data,error}=await sb.rpc('moto_click_login',{p_username:username,p_password:password});if(error||!data)return null;return data}
+$('loginForm').onsubmit=async e=>{e.preventDefault();$('loginMsg').textContent='';const u=$('loginUsername').value.trim(),p=$('loginPassword').value;if(!u||!p)return;$('loginBtn').disabled=true;$('loginBtn').textContent='Entrando...';const result=await login(u,p);$('loginBtn').disabled=false;$('loginBtn').textContent='Entrar';if(!result){$('loginMsg').textContent='Usuário ou senha inválidos.';return}session=result;saveSession();$('loginPassword').value='';paintAccount();await loadProducts();if(session.role==='admin')note('Acesso administrativo ativado.');else note('Login realizado com sucesso.')};
+$('registerForm').onsubmit=async e=>{e.preventDefault();$('registerMsg').textContent='';const name=$('regName').value.trim(),username=$('regUsername').value.trim(),password=$('regPassword').value;const {data,error}=await sb.rpc('moto_click_customer_register',{p_display_name:name,p_username:username,p_password:password});if(error){$('registerMsg').textContent='Não foi possível criar a conta.';return}if(!data?.ok){const msgs={username_length:'O usuário deve ter entre 3 e 40 caracteres.',username_invalid:'Use apenas letras, números, ponto, hífen ou underline.',password_length:'A senha precisa ter pelo menos 6 caracteres.',username_unavailable:'Esse nome de usuário já está em uso.'};$('registerMsg').textContent=msgs[data?.error]||'Não foi possível criar a conta.';return}session={role:data.role,username:data.username,display_name:data.display_name,token:data.token};saveSession();paintAccount();await loadProducts();note('Conta criada com sucesso.')};
+$('logoutBtn').onclick=async()=>{if(session?.token){const fn=session.role==='admin'?'moto_click_admin_logout':'moto_click_customer_logout';await sb.rpc(fn,{p_token:session.token})}session=null;saveSession();editing=null;currentImages=[];$('adminEditor').classList.remove('open');paintAccount();await loadProducts();closeAccount();note('Você saiu da conta.')};
+function pic(p){const u=p.image_urls&&p.image_urls[0];return u?`<img src="${esc(u)}" alt="${esc(p.name)}" loading="lazy">`:(icons[p.category]||'⚙')}
+async function loadProducts(){$('grid').innerHTML='<div class="empty">Carregando produtos...</div>';let data,error;if(session?.role==='admin'){({data,error}=await sb.rpc('moto_click_admin_list_products',{p_token:session.token}))}else{({data,error}=await sb.from('moto_click_products').select('*').eq('active',true).order('featured',{ascending:false}).order('created_at',{ascending:false}))}if(error){$('grid').innerHTML='<div class="empty">Não foi possível carregar os produtos.</div>';return}P=data||[];cleanupCart();renderProducts($('search').value||'');renderCart();renderAdminStats()}
+function renderAdminStats(){if(session?.role!=='admin')return;$('stTotal').textContent=P.length;$('stActive').textContent=P.filter(p=>p.active).length;$('stLow').textContent=P.filter(p=>Number(p.stock)<=5).length}
+function renderProducts(q=''){q=q.toLowerCase();const list=P.filter(p=>(!cat||p.category===cat)&&(p.name+' '+p.model+' '+p.sku+' '+p.category).toLowerCase().includes(q));$('grid').innerHTML=list.length?list.map(p=>{const admin=session?.role==='admin';const sold=Number(p.stock)<=0;return `<article class="card ${admin&&!p.active?'admin-hidden':''}">${admin&&!p.active?'<span class="state-tag">OCULTO</span>':''}<div class="pic">${pic(p)}</div><div class="body"><h3>${esc(p.name)}</h3><small>${esc(p.model||p.sku||p.category)}</small><div class="price">${money(p.price)}</div><div class="stock ${sold?'out':''}">${sold?'Sem estoque':`Estoque: ${Number(p.stock)}`}</div><button class="btn primary wide" ${sold?'disabled':''} onclick="add('${p.id}')">🛒 ${sold?'Indisponível':'Adicionar ao carrinho'}</button>${admin?`<div class="admin-card-actions"><button class="btn ghost" onclick="editProduct('${p.id}')">Editar</button><button class="btn danger" data-delete="${p.id}" onclick="deleteStep('${p.id}',this)">Excluir</button></div>`:''}</div></article>`}).join(''):'<div class="empty" style="grid-column:1/-1">Nenhum produto encontrado.</div>'}
+$('search').oninput=e=>renderProducts(e.target.value);document.querySelectorAll('.cat').forEach(b=>b.onclick=()=>{cat=b.dataset.cat;$('search').value='';renderProducts();$('produtos').scrollIntoView({behavior:'smooth'})});
+function add(id){const p=P.find(x=>x.id===id);if(!p||Number(p.stock)<=0)return;C[id]=Math.min((C[id]||0)+1,Number(p.stock));saveCart();note('Produto adicionado ao carrinho.')}function qty(id,d){const p=P.find(x=>x.id===id);if(!p)return;C[id]=(C[id]||0)+d;if(C[id]<=0)delete C[id];else C[id]=Math.min(C[id],Number(p.stock));saveCart()}function cleanupCart(){for(const id of Object.keys(C)){const p=P.find(x=>x.id===id);if(!p||Number(p.stock)<=0)delete C[id];else C[id]=Math.min(C[id],Number(p.stock))}localStorage.setItem('mc_cart',JSON.stringify(C))}function saveCart(){localStorage.setItem('mc_cart',JSON.stringify(C));renderCart()}
+function renderCart(){const arr=Object.entries(C).map(([id,q])=>[P.find(x=>x.id===id),q]).filter(x=>x[0]);const count=arr.reduce((a,[p,q])=>a+q,0),total=arr.reduce((a,[p,q])=>a+Number(p.price)*q,0);$('badge').textContent=count;$('items').textContent=`Total (${count} ${count===1?'item':'itens'})`;$('sum').textContent=money(total);$('cart').innerHTML=arr.length?arr.map(([p,q])=>`<div class="row"><div class="thumb">${pic(p)}</div><div><strong>${esc(p.name)}</strong><small>${esc(p.model||'')}</small></div><div class="qty"><button onclick="qty('${p.id}',-1)">−</button><span>${q}</span><button onclick="qty('${p.id}',1)">+</button></div><div class="rprice">${money(Number(p.price)*q)}</div><button class="del" onclick="delete C['${p.id}'];saveCart()">⌫</button></div>`).join(''):'<div class="empty">Seu carrinho está vazio.</div>'}
+$('clear').onclick=()=>{C={};saveCart();note('Carrinho limpo.')};
+function order(){const arr=Object.entries(C).map(([id,q])=>[P.find(x=>x.id===id),q]).filter(x=>x[0]);if(!arr.length)return note('Adicione algum produto ao carrinho.');const tot=arr.reduce((a,[p,q])=>a+Number(p.price)*q,0);const m='Olá, Moto Click! Quero faturar minhas peças:\n\n'+arr.map(([p,q])=>`• ${q}x ${p.name} (${p.model||p.sku||''}) — ${money(Number(p.price)*q)}`).join('\n')+`\n\nTotal dos itens: ${money(tot)}`;navigator.clipboard?.writeText(m);note('Pedido copiado. Configure o WhatsApp da loja para envio automático.')}$('finish').onclick=order;$('wa').onclick=order;
+$('newProductBtn').onclick=()=>openEditor();$('cancelEditBtn').onclick=closeEditor;function openEditor(p=null){if(session?.role!=='admin')return;editing=p;currentImages=[...(p?.image_urls||[])];$('editorTitle').textContent=p?'Editar produto':'Novo produto';$('fName').value=p?.name||'';$('fSku').value=p?.sku||'';$('fModel').value=p?.model||'';$('fCategory').value=p?.category||'Motor';$('fPrice').value=p?.price??'';$('fStock').value=p?.stock??0;$('fDescription').value=p?.description||'';$('fFeatured').checked=!!p?.featured;$('fActive').checked=p?!!p.active:true;$('fImages').value='';renderExistingImages();$('adminEditor').classList.add('open');setTimeout(()=>$('adminEditor').scrollIntoView({behavior:'smooth',block:'start'}),40)}function closeEditor(){editing=null;currentImages=[];$('adminEditor').classList.remove('open');$('productForm').reset();$('fActive').checked=true}window.editProduct=id=>{const p=P.find(x=>x.id===id);if(p)openEditor(p)};function renderExistingImages(){$('existingImages').innerHTML=currentImages.map((u,i)=>`<div class="iprev"><img src="${esc(u)}" alt=""><button type="button" onclick="removeExistingImage(${i})">×</button></div>`).join('')}window.removeExistingImage=i=>{currentImages.splice(i,1);renderExistingImages()};
+async function uploadOne(file,productId){const form=new FormData();form.append('file',file);form.append('productId',productId);const r=await fetch(`${SB_URL}/functions/v1/moto-click-admin-upload`,{method:'POST',headers:{'x-admin-token':session.token,'apikey':SB_KEY},body:form});const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(j.error||'upload_failed');return j.url}
+$('productForm').onsubmit=async e=>{e.preventDefault();if(session?.role!=='admin')return;const btn=$('saveProductBtn');btn.disabled=true;btn.textContent='Salvando...';try{let payload={id:editing?.id||null,name:$('fName').value.trim(),sku:$('fSku').value.trim(),model:$('fModel').value.trim(),category:$('fCategory').value,price:Number($('fPrice').value||0),stock:Number($('fStock').value||0),description:$('fDescription').value.trim(),featured:$('fFeatured').checked,active:$('fActive').checked,image_urls:currentImages};const first=await sb.rpc('moto_click_admin_save_product',{p_token:session.token,p_product:payload});if(first.error)throw first.error;const productId=first.data;const files=[...$('fImages').files];if(files.length){btn.textContent='Enviando fotos...';const urls=[];for(const file of files)urls.push(await uploadOne(file,productId));payload.id=productId;payload.image_urls=[...currentImages,...urls];const second=await sb.rpc('moto_click_admin_save_product',{p_token:session.token,p_product:payload});if(second.error)throw second.error}closeEditor();await loadProducts();note('Produto salvo com sucesso.')}catch(err){note('Não foi possível salvar o produto.');console.error(err)}finally{btn.disabled=false;btn.textContent='Salvar produto'}};
+window.deleteStep=async(id,btn)=>{if(session?.role!=='admin')return;if(btn.dataset.confirm!=='1'){btn.dataset.confirm='1';btn.textContent='Clique novamente para excluir';btn.classList.add('danger');setTimeout(()=>{if(btn.isConnected){btn.dataset.confirm='0';btn.textContent='Excluir'}},3500);return}btn.disabled=true;btn.textContent='Excluindo...';const {error}=await sb.rpc('moto_click_admin_delete_product',{p_token:session.token,p_id:id});if(error){btn.disabled=false;btn.textContent='Excluir';note('Não foi possível excluir.');return}if(editing?.id===id)closeEditor();await loadProducts();note('Produto excluído.')};
+async function boot(){await validateSession();paintAccount();await loadProducts();renderCart();const params=new URLSearchParams(location.search);if(params.get('conta')==='1')openAccount('login')}boot();
+</script>
+</body>
+</html>
